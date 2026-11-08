@@ -1,0 +1,22 @@
+{
+  "name": "outreach-api-examples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Twelve GetSales API tasks, each as a bash script built on curl and as a TypeScript file: tables, people, waterfall enrichment, workflows, the inbox, tasks and webhooks",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "check-paths": "node scripts/check-paths.mjs",
+    "test": "node --test test/*.test.ts",
+    "check": "npm run typecheck && npm run check-paths && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "typescript": "6.0.3",
+    "yaml": "2.9.1"
+  }
+}
